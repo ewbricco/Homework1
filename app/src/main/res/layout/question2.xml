@@ -19,11 +19,11 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next Question"
+        android:text="Next"
         android:id="@+id/nextQuestion"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="gotoNextQuestion"/>
+        android:onClick="gotoSummary"/>
 
     <TextView
         android:layout_width="wrap_content"
