@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="Start Quiz"
         android:onClick="GotoQuestions"
-        android:id="@+id/button"
+        android:id="@+id/bu"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="212dp" />
