@@ -5,7 +5,11 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class Questions extends Activity {
 
@@ -14,12 +18,19 @@ public class Questions extends Activity {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_questions);
         FragmentManager fragmentManager = getFragmentManager();
-
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         question1 q1 = new question1();
         fragmentTransaction.replace(android.R.id.content, q1);
-
         fragmentTransaction.commit();
+    }
+    private EditText q1Guess;
+
+    public void checkQ1(View v){
+        Button button = (Button) v;
+        q1Guess = (EditText) findViewById(R.id.q1Guess);
+        Toast toast = new Toast (getApplicationContext());
+        toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
+        toast.makeText(Questions.this, q1Guess.getText(), toast.LENGTH_SHORT).show();
 
     }
 

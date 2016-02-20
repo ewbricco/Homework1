@@ -10,5 +10,8 @@ public class QuizSummary extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_summary);
     }
-
+    public void Quit(){
+        finish();
+        System.exit(0);
+    }
 }
