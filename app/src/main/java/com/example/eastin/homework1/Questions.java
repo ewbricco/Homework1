@@ -24,6 +24,8 @@ public class Questions extends Activity {
         fragmentTransaction.commit();
     }
     private EditText q1Guess;
+    boolean q1Correct;
+    boolean q2Correct;
 
     public void checkQ1(View v){
         Button button = (Button) v;
