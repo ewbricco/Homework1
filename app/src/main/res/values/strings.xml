@@ -3,4 +3,6 @@
     <string name="title_activity_questions">Questions</string>
     <string name="wisconsinpic">image of wi</string>
     <string name="wisconsin">wisconsin</string>
+    <string name="title_activity_quiz">QuizActivity</string>
+    <string name="title_activity_quiz_summary">QuizSummary</string>
 </resources>
