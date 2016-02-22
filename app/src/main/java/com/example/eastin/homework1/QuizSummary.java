@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
+import android.widget.TextView;
 
 public class QuizSummary extends Activity {
 
@@ -11,7 +12,29 @@ public class QuizSummary extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_summary);
+        Bundle extras = getIntent().getExtras();
+        boolean[] results = extras.getBooleanArray("results");
+        TextView result1 = (TextView)findViewById(R.id.textView5);
+        TextView result2 = (TextView)findViewById(R.id.textView6);
+        String q1Correct;
+        String q2Correct;
+        if(results[0]){
+            q1Correct = "correct";
+        }
+        else{
+            q1Correct = "incorrect";
+        }
+        if(results[1]){
+            q2Correct = "correct";
+        }
+        else{
+            q2Correct = "incorrect";
+        }
+
+        result1.setText("Question 1 was " + q1Correct);
+        result2.setText("Question 2 was " + q2Correct);
     }
+
     public void Quit(View view){
         Intent intent = new Intent(Intent.ACTION_MAIN);
         intent.addCategory(Intent.CATEGORY_HOME);
