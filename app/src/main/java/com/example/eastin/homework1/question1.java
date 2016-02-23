@@ -32,15 +32,4 @@ public class question1 extends Fragment {
             Questions.q1Correct=true;
         }
     }
-    /*public void checkQ1(View v){
-        //Log.d(TAG, "checking Q1");
-        EditText q1Guess = (EditText) v.findViewById(R.id.q1Guess);
-        //Toast toast = new Toast (getApplicationContext());
-        //toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
-        //toast.makeText(Questions.this, q1Guess.getText(), toast.LENGTH_SHORT).show();
-        //Log.d(TAG, "q1:" + q1Guess.getText());
-        if(q1Guess.getText().toString().equals("Wisconsin") || q1Guess.getText().equals("wisconsin")){
-            Questions.q1Correct=true;
-        }
-    }*/
 }
