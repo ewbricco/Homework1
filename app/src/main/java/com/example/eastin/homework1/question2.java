@@ -1,5 +1,6 @@
 package com.example.eastin.homework1;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -22,6 +23,11 @@ public class question2 extends Fragment {
         return inflater.inflate(R.layout.question2, container, false);
     }
 
+    /*@Override
+    public void onAttach(Activity activity){
+        super.onAttach(activity);
+        mActivity = activity;
+    }*/
     public void onActivityCreated (Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
 
@@ -44,12 +50,18 @@ public class question2 extends Fragment {
             RadioButton r3 = (RadioButton) getActivity().findViewById(R.id.radioButton3);
             if (r1.isChecked()) {
                 Log.d(TAG, "1776 check");
+                Toast.makeText(getActivity(), "1776", Toast.LENGTH_LONG).show();
+                Questions.q2Correct = false;
             }
             if (r2.isChecked()) {
                 Log.d(TAG, "1913 check");
+                Toast.makeText(getActivity(), "1913", Toast.LENGTH_LONG).show();
+                Questions.q2Correct = false;
             }
             if (r3.isChecked()) {
                 Log.d(TAG, "1848 check");
+                Toast.makeText(getActivity(), "1848", Toast.LENGTH_LONG).show();
+                Questions.q2Correct = true;
             }
         }
     };

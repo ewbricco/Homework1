@@ -30,8 +30,8 @@ public class Questions extends Activity {
 
     }
     private static final String TAG = Questions.class.getSimpleName();
-    boolean q1Correct=false;
-    boolean q2Correct=false;
+    static boolean q1Correct=false;
+    static boolean q2Correct=false;
 
     public void checkQ1(){
         Log.d(TAG, "checking Q1");
