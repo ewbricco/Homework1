@@ -5,10 +5,14 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.app.Fragment;
+import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by Eastin on 2/19/2016.
@@ -19,4 +23,24 @@ public class question1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.question1, container, false);
     }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        EditText q1Guess = (EditText) getActivity().findViewById(R.id.q1Guess);
+        if(q1Guess.getText().toString().equals("Wisconsin") || q1Guess.getText().toString().equals("wisconsin")){
+            Questions.q1Correct=true;
+        }
+    }
+    /*public void checkQ1(View v){
+        //Log.d(TAG, "checking Q1");
+        EditText q1Guess = (EditText) v.findViewById(R.id.q1Guess);
+        //Toast toast = new Toast (getApplicationContext());
+        //toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
+        //toast.makeText(Questions.this, q1Guess.getText(), toast.LENGTH_SHORT).show();
+        //Log.d(TAG, "q1:" + q1Guess.getText());
+        if(q1Guess.getText().toString().equals("Wisconsin") || q1Guess.getText().equals("wisconsin")){
+            Questions.q1Correct=true;
+        }
+    }*/
 }

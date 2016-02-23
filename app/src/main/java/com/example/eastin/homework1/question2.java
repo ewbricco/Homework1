@@ -50,17 +50,17 @@ public class question2 extends Fragment {
             RadioButton r3 = (RadioButton) getActivity().findViewById(R.id.radioButton3);
             if (r1.isChecked()) {
                 Log.d(TAG, "1776 check");
-                Toast.makeText(getActivity(), "1776", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "1776", Toast.LENGTH_SHORT).show();
                 Questions.q2Correct = false;
             }
             if (r2.isChecked()) {
                 Log.d(TAG, "1913 check");
-                Toast.makeText(getActivity(), "1913", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "1913", Toast.LENGTH_SHORT).show();
                 Questions.q2Correct = false;
             }
             if (r3.isChecked()) {
                 Log.d(TAG, "1848 check");
-                Toast.makeText(getActivity(), "1848", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "1848", Toast.LENGTH_SHORT).show();
                 Questions.q2Correct = true;
             }
         }

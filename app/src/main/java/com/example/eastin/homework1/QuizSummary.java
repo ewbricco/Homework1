@@ -44,7 +44,7 @@ public class QuizSummary extends Activity {
     public void GotoQuestions(View view){
         //setContentView(R.layout.activity_questions);
         Questions.q2Correct=false;
-        Questions.q1Correct=true;
+        Questions.q1Correct=false;
         startActivity(new Intent(this, Questions.class));
     }
 }
